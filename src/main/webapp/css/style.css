@@ -1,0 +1,213 @@
+:root {
+    --primary-brand: #2563eb;
+    --primary-dark: #1d4ed8;
+    --sidebar-bg: #0f172a;
+    --sidebar-text: #94a3b8;
+    --sidebar-active: #3b82f6;
+    --content-bg: #f8fafc;
+    --card-border: #e2e8f0;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --info-color: #06b6d4;
+    --purple-color: #8b5cf6;
+}
+
+body {
+    background-color: var(--content-bg);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar & Layout */
+.app-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    flex-shrink: 0;
+    min-height: 100vh;
+    padding-top: 1rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar .brand {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.sidebar .nav-link {
+    color: var(--sidebar-text);
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.sidebar .nav-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar .nav-link.active {
+    color: #ffffff;
+    background: rgba(59, 130, 246, 0.15);
+    border-left-color: var(--sidebar-active);
+}
+
+.sidebar .nav-section-title {
+    padding: 1.25rem 1.5rem 0.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #64748b;
+    font-weight: 700;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* Navbar */
+.top-navbar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--card-border);
+    padding: 0.75rem 1.75rem;
+}
+
+/* Dashboard Cards */
+.stat-card {
+    background: #ffffff;
+    border: 1px solid var(--card-border);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.stat-value {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* Table Enhancements */
+.table-card {
+    background: #ffffff;
+    border: 1px solid var(--card-border);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.table thead th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--card-border);
+}
+
+/* Badges */
+.badge-waiting { background-color: #e2e8f0; color: #475569; }
+.badge-called { background-color: #fef3c7; color: #b45309; }
+.badge-serving { background-color: #dbeafe; color: #1e40af; }
+.badge-paused { background-color: #ffedd5; color: #c2410c; }
+.badge-completed { background-color: #d1fae5; color: #065f46; }
+.badge-cancelled { background-color: #fee2e2; color: #991b1b; }
+.badge-noshow { background-color: #f3e8ff; color: #6b21a8; }
+.badge-transferred { background-color: #cffafe; color: #155e75; }
+
+.priority-badge-normal { background-color: #e0f2fe; color: #0369a1; }
+.priority-badge-priority { background-color: #fef3c7; color: #92400e; }
+.priority-badge-urgent { background-color: #fed7aa; color: #9a3412; }
+.priority-badge-emergency { background-color: #fecaca; color: #b91c1c; font-weight: 700; }
+
+/* Public Queue TV Display */
+.tv-display-body {
+    background: #090d16;
+    color: #ffffff;
+    font-family: system-ui, sans-serif;
+}
+
+.tv-brand {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.tv-serving-card {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 2px solid #3b82f6;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+.tv-token-number {
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: #60a5fa;
+    letter-spacing: 2px;
+}
+
+.tv-counter-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #34d399;
+}
+
+/* Service Session Timer */
+.timer-display {
+    font-family: monospace;
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 2px;
+}

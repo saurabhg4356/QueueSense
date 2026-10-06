@@ -1,0 +1,27 @@
+# Maven
+target/
+*.war
+*.jar
+*.class
+
+# Logs
+*.log
+*.txt
+*.html
+
+# IDEs and Editors
+.settings/
+.project
+.classpath
+.idea/
+*.iml
+*.iws
+.vscode/
+
+# Environment and sensitive configuration
+**/db.properties
+!**/db.properties.example
+
+# OS generated
+.DS_Store
+Thumbs.db

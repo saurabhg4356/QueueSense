@@ -1,0 +1,23 @@
+# ============================================================
+# QueueSense - Database Configuration Template
+# Copy this file to db.properties and set your local credentials.
+# ============================================================
+
+db.driver=com.mysql.cj.jdbc.Driver
+
+# Default MySQL 8.0 installation on standard port 3306:
+# db.url=jdbc:mysql://localhost:3306/queuesense?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=UTF-8
+# db.username=root
+# db.password=your_mysql_password
+
+# MariaDB / XAMPP / Alternative port 3307:
+db.url=jdbc:mysql://localhost:3307/queuesense?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=UTF-8
+db.username=root
+db.password=
+
+# Connection Pool Settings (HikariCP)
+db.pool.maximumPoolSize=10
+db.pool.minimumIdle=2
+db.pool.idleTimeout=30000
+db.pool.connectionTimeout=10000
+db.pool.maxLifetime=600000
